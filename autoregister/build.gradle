@@ -7,18 +7,18 @@ dependencies {
     implementation gradleApi()
     implementation localGroovy()
 
-    implementation 'org.ow2.asm:asm:6.0'
-    implementation 'org.ow2.asm:asm-commons:6.0'
-    implementation 'org.ow2.asm:asm-analysis:6.0'
-    implementation 'org.ow2.asm:asm-util:6.0'
-    implementation 'org.ow2.asm:asm-tree:6.0'
+    implementation 'org.ow2.asm:asm:7.1'
+    implementation 'org.ow2.asm:asm-commons:7.0'
+    implementation 'org.ow2.asm:asm-analysis:7.0'
+    implementation 'org.ow2.asm:asm-util:7.0'
+    implementation 'org.ow2.asm:asm-tree:7.0'
 }
 
 repositories {
     mavenCentral()
 }
 dependencies {
-    compileOnly('com.android.tools.build:gradle:3.2.0'){
+    compileOnly('com.android.tools.build:gradle:4.0.2'){
         exclude group:'org.ow2.asm'
     }
 }
