@@ -6,11 +6,19 @@ apply plugin: 'com.github.dcendents.android-maven'
 dependencies {
     implementation gradleApi()
     implementation localGroovy()
+
+    implementation 'org.ow2.asm:asm:6.0'
+    implementation 'org.ow2.asm:asm-commons:6.0'
+    implementation 'org.ow2.asm:asm-analysis:6.0'
+    implementation 'org.ow2.asm:asm-util:6.0'
+    implementation 'org.ow2.asm:asm-tree:6.0'
 }
 
 repositories {
     mavenCentral()
 }
 dependencies {
-    implementation 'com.android.tools.build:gradle:3.2.0'
+    compileOnly('com.android.tools.build:gradle:3.2.0'){
+        exclude group:'org.ow2.asm'
+    }
 }
