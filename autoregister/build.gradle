@@ -1,24 +1,26 @@
 apply plugin: 'groovy'
-//apply plugin: 'maven'
 
 apply plugin: 'com.github.dcendents.android-maven'
 
 dependencies {
     implementation gradleApi()
     implementation localGroovy()
-
-    implementation 'org.ow2.asm:asm:7.1'
-    implementation 'org.ow2.asm:asm-commons:7.0'
-    implementation 'org.ow2.asm:asm-analysis:7.0'
-    implementation 'org.ow2.asm:asm-util:7.0'
-    implementation 'org.ow2.asm:asm-tree:7.0'
 }
 
 repositories {
     mavenCentral()
 }
 dependencies {
-    compileOnly('com.android.tools.build:gradle:4.0.2'){
-        exclude group:'org.ow2.asm'
-    }
+    compileOnly 'com.android.tools.build:gradle:4.0.2'
 }
+
+//apply plugin: 'maven'
+//
+//uploadArchives{
+//    repositories.mavenDeployer{
+//        repository(url:uri('../repository'))
+//        pom.groupId = 'com.github.NBtang'
+//        pom.artifactId = 'CarryAutoRegister'
+//        pom.version = '1.0.3'
+//    }
+//}
