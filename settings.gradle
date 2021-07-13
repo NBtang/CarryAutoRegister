@@ -1,0 +1,3 @@
+include ':autoregister'
+include ':app'
+rootProject.name = "CarryAutoRegister"
